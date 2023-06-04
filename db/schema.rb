@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_03_052950) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_04_011709) do
+  create_table "events", force: :cascade do |t|
+    t.date "date", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "games", force: :cascade do |t|
     t.string "title", null: false
     t.boolean "stocked", default: true, null: false
